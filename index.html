@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vernon Steward — Operator, Builder, Delivering Unique Growth Solutions</title>
+  <meta name="description" content="Vernon Steward is a New York–based senior operator and CEO of Prota Studios. 25 years building businesses, digital products, and revenue lines from zero." />
+
+  <meta property="og:title" content="Vernon Steward" />
+  <meta property="og:description" content="Operator. Builder. Delivering unique growth solutions." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vernonsteward.com" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23faf8f3'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='60' text-anchor='middle' fill='%238b3a3a'%3EV%3C/text%3E%3C/svg%3E" />
+
+  <style>
+    /* ---------------------------------------------------------
+       Design tokens — change one value, it cascades everywhere.
+       --------------------------------------------------------- */
+    :root {
+      --bg: #faf8f3;
+      --surface: #ffffff;
+      --ink: #1a1a1a;
+      --muted: #6b6b6b;
+      --rule: #d9d4c8;
+      --accent: #8b3a3a;
+      --measure: 760px;       /* max content width */
+      --measure-wide: 980px;  /* max width for project grid */
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; }
+
+    /* ---------------------------------------------------------
+       Typography
+       --------------------------------------------------------- */
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Iowan Old Style", "Charter", serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      margin: 0;
+    }
+
+    h1 { font-size: 2.6rem; line-height: 1.12; }
+    h2 {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      font-family: -apple-system, sans-serif;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+    h3 { font-size: 1.15rem; line-height: 1.3; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+    }
+    a:hover { border-bottom-color: var(--accent); }
+
+    p { margin: 0 0 1em; }
+
+    /* ---------------------------------------------------------
+       Layout shell
+       --------------------------------------------------------- */
+    main {
+      max-width: var(--measure-wide);
+      margin: 0 auto;
+      padding: 4rem 1.5rem 4rem;
+    }
+
+    section {
+      max-width: var(--measure);
+      margin: 0 auto;
+      padding-top: 4rem;
+      margin-top: 4rem;
+      border-top: 1px solid var(--rule);
+    }
+    section:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
+
+    /* Full-width sections (grids) override the narrower measure */
+    section.services, section.projects {
+      max-width: var(--measure-wide);
+    }
+
+    /* ---------------------------------------------------------
+       HERO — photo + text side by side, stacks on mobile
+       --------------------------------------------------------- */
+    .hero {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--rule); /* placeholder color while no image loads */
+      flex-shrink: 0;
+    }
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero .eyebrow {
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 1rem;
+    }
+    .hero h1 { margin-bottom: 1.25rem; }
+    .hero .lede {
+      font-size: 1.15rem;
+      color: #2a2a2a;
+      max-width: 36em;
+      margin: 0;
+    }
+
+    /* ---------------------------------------------------------
+       WHAT I DO — three service blocks
+       --------------------------------------------------------- */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .service {
+      padding: 2rem 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      border-top: 3px solid var(--accent);
+    }
+    .service h3 {
+      margin-bottom: 0.75rem;
+      color: var(--ink);
+    }
+    .service p {
+      font-size: 0.97rem;
+      line-height: 1.55;
+      color: #333;
+      margin: 0;
+    }
+
+    /* ---------------------------------------------------------
+       SELECT PROJECTS — smaller card grid with typographic marks
+       --------------------------------------------------------- */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .project {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 1.75rem 1.25rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .project-logo {
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 1.25rem;
+    }
+    .project-logo img {
+      max-height: 100%;
+      max-width: 70%;
+      object-fit: contain;
+      filter: grayscale(100%) contrast(1.1);
+    }
+    .logo-mark {
+      font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #1a1a1a;
+    }
+    .project h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      color: var(--ink);
+    }
+    .project p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: #444;
+      margin: 0;
+    }
+
+    /* ---------------------------------------------------------
+       CONTACT
+       --------------------------------------------------------- */
+    .contact dl {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 0.75rem 1.5rem;
+      margin: 0;
+    }
+    .contact dt { color: var(--muted); font-size: 0.92rem; padding-top: 0.1rem; }
+    .contact dd { margin: 0; }
+
+    /* ---------------------------------------------------------
+       FOOTER
+       --------------------------------------------------------- */
+    footer {
+      max-width: var(--measure);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--rule);
+      margin-top: 4rem;
+    }
+
+    /* ---------------------------------------------------------
+       MOBILE — collapse all multi-column layouts to single column.
+       Breakpoints: tablet (≤860) and phone (≤560).
+       --------------------------------------------------------- */
+    @media (max-width: 860px) {
+      .service-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+      .project-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+    }
+
+    @media (max-width: 560px) {
+      main { padding: 2.5rem 1.25rem; }
+      h1 { font-size: 1.95rem; }
+      h2 { margin-bottom: 1.5rem; }
+      section { padding-top: 3rem; margin-top: 3rem; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: left;
+      }
+      .hero-photo {
+        width: 130px;
+        height: 130px;
+      }
+
+      .project-grid { grid-template-columns: 1fr; }
+
+      .contact dl {
+        grid-template-columns: 1fr;
+        gap: 0.25rem 0;
+      }
+      .contact dt { margin-top: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-photo">
+        <img src="images/vernon.jpg" alt="Vernon Steward" />
+      </div>
+      <div class="hero-text">
+        <div class="eyebrow">Vernon Steward · New York</div>
+        <h1>Operator. Builder. Delivering Unique Growth Solutions.</h1>
+        <p class="lede">
+          I help companies turn ambiguous opportunities into clear roadmaps,
+          measurable tests, and repeatable commercial models — with 25 years
+          building businesses, digital products, and revenue lines from zero.
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+      <h2>About</h2>
+      <p>
+        I grew up in South Africa and Italy and have spent most of the last
+        few decades in New York building products and launching new
+        businesses: from an enterprise innovation lab to multi-million-dollar
+        growth and build studios.
+      </p>
+      <p>
+        I work best at the front edge of new businesses: the part where the
+        brief is half a page and the answer is somewhere out in the world.
+        I run lean experiments, design operating models, and ship things
+        alongside founders, product teams, and Fortune 500 executives.
+      </p>
+      <p>
+        Outside work I cook whatever is in the fridge, follow the
+        long-suffering NY Knicks and AS Roma, and speak four languages with
+        varying degrees of conviction.
+      </p>
+    </section>
+
+    <!-- WHAT I DO -->
+    <section class="services">
+      <h2>What I Do</h2>
+      <div class="service-grid">
+
+        <article class="service">
+          <h3>Validation</h3>
+          <p>
+            Get the right market signals to make your next product and
+            business decision informed and based on real customer data.
+            Research, experiments, demand tests, AI-enabled workflows.
+          </p>
+        </article>
+
+        <article class="service">
+          <h3>Growth Marketing</h3>
+          <p>
+            Set up your multichannel marketing stack, or audit and optimize
+            what you are running. Connect the data from the top of funnel
+            ads to your backend CRM. Search, Social, S/GEO, Analytics,
+            Content, Email.
+          </p>
+        </article>
+
+        <article class="service">
+          <h3>Product Development</h3>
+          <p>
+            Design, test, and develop new digital products at AI speed —
+            from UI/UX design through high-fidelity prototypes to shipped
+            code, all with built-in experiment loops and conversion
+            optimization.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SELECT PROJECTS -->
+    <section class="projects">
+      <h2>Select Projects</h2>
+      <div class="project-grid">
+
+        <article class="project">
+          <div class="project-logo"><span class="logo-mark">Citi</span></div>
+          <h3>Citi Ventures</h3>
+          <p>Innovation partner for 9 years delivering 100+ product experiments and demand tests, developing new products and capabilities.</p>
+        </article>
+
+        <article class="project">
+          <div class="project-logo"><span class="logo-mark">Wire</span></div>
+          <h3>Wire Network</h3>
+          <p>Led a 12-week incubator program for an emerging blockchain, including content, communication, community, and demo day.</p>
+        </article>
+
+        <article class="project">
+          <div class="project-logo"><span class="logo-mark">Exelon</span></div>
+          <h3>Exelon</h3>
+          <p>Incubated an environmental impact startup, product, and app for the largest US utility. Based on traction it was spun out and sold.</p>
+        </article>
+
+        <article class="project">
+          <div class="project-logo"><span class="logo-mark">Provuu</span></div>
+          <h3>Provuu</h3>
+          <p>Launched a time-constrained Kickstarter campaign for an AR snow goggle startup: 650% of goal, most successful category campaign ever.</p>
+        </article>
+
+        <article class="project">
+          <div class="project-logo"><span class="logo-mark">Clorox</span></div>
+          <h3>Clorox</h3>
+          <p>Developed product innovations, ecommerce MVPs, and demand tests for brands including Glad, Kingsford, and Fresh Step.</p>
+        </article>
+
+        <article class="project">
+          <div class="project-logo"><span class="logo-mark">Visa</span></div>
+          <h3>Visa</h3>
+          <p>Ran an international new-product validation test comparing consumer product demand across the US and Asia.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+      <h2>Contact</h2>
+      <dl>
+        <dt>Email</dt>
+        <dd><a href="mailto:vsteward@gmail.com">vsteward@gmail.com</a></dd>
+
+        <dt>LinkedIn</dt>
+        <dd><a href="https://www.linkedin.com/in/vsteward/" target="_blank" rel="noopener">linkedin.com/in/vsteward</a></dd>
+
+        <dt>Telegram</dt>
+        <dd><a href="https://t.me/vworld26" target="_blank" rel="noopener">@vworld26</a></dd>
+
+        <dt>X</dt>
+        <dd><a href="https://x.com/vsteward" target="_blank" rel="noopener">@vsteward</a></dd>
+      </dl>
+    </section>
+
+  </main>
+
+  <footer>
+    © Vernon Steward · Built in New York.
+  </footer>
+
+</body>
+</html>

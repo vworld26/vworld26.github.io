@@ -1,0 +1,10 @@
+# macOS noise
+.DS_Store
+
+# Editor noise
+.vscode/
+.idea/
+*.swp
+
+# OS thumbs
+Thumbs.db
