@@ -24,7 +24,7 @@
       --muted: #6b6b6b;
       --rule: #d9d4c8;
       --accent: #8b3a3a;
-      --measure: 880px;       /* max content width, unified for every section */
+      --measure: 980px;       /* max content width, unified for every section */
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -58,7 +58,7 @@
       color: var(--muted);
       font-family: -apple-system, sans-serif;
       font-weight: 500;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
     h3 { font-size: 1.15rem; line-height: 1.3; }
 
@@ -87,20 +87,26 @@
       border-top: 1px solid var(--rule);
     }
     section:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
+    section:last-of-type { padding-bottom: 0; }
+    /* kill trailing margin on the last child of each section so spacing
+       above and below the divider line stays visually equal */
+    section > *:last-child { margin-bottom: 0; }
+    section p:last-of-type { margin-bottom: 0; }
 
     /* ---------------------------------------------------------
        HERO: photo + text side by side, stacks on mobile
        --------------------------------------------------------- */
     .hero {
       display: grid;
-      grid-template-columns: 240px 1fr;
+      grid-template-columns: 280px 1fr;
       gap: 2.5rem;
-      align-items: center;
+      align-items: stretch;
     }
 
     .hero-photo {
-      width: 240px;
-      height: 240px;
+      width: 280px;
+      min-height: 280px;
+      height: 100%;
       border-radius: 6px;
       overflow: hidden;
       background: var(--rule); /* placeholder color while no image loads */
@@ -211,7 +217,7 @@
     .contact dl {
       display: grid;
       grid-template-columns: 110px 1fr;
-      gap: 0.75rem 1.5rem;
+      gap: 0.35rem 1.5rem;
       margin: 0;
     }
     .contact dt { color: var(--muted); font-size: 0.92rem; padding-top: 0.1rem; }
@@ -222,12 +228,11 @@
        --------------------------------------------------------- */
     footer {
       max-width: var(--measure);
-      margin: 0 auto;
-      padding: 3rem 1.5rem 4rem;
+      margin: 2.5rem auto 0;
+      padding: 2.5rem 1.5rem 2.5rem;
       color: var(--muted);
       font-size: 0.85rem;
       border-top: 1px solid var(--rule);
-      margin-top: 4rem;
     }
 
     /* ---------------------------------------------------------
@@ -247,12 +252,13 @@
 
       .hero {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.25rem;
         text-align: left;
       }
       .hero-photo {
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
+        min-height: 220px;
       }
 
       .project-grid { grid-template-columns: 1fr; }
