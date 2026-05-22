@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vernon Steward — Operator, Builder, Delivering Unique Growth Solutions</title>
-  <meta name="description" content="Vernon Steward is a New York–based senior operator and CEO of Prota Studios. 25 years building businesses, digital products, and revenue lines from zero." />
+  <title>Vernon Steward, Operator, Builder, Delivering Unique Growth Solutions</title>
+  <meta name="description" content="Vernon Steward is a New York based senior operator and CEO of Prota Studios. 25 years building businesses, digital products, and revenue lines from zero." />
 
   <meta property="og:title" content="Vernon Steward" />
   <meta property="og:description" content="Operator. Builder. Delivering unique growth solutions." />
@@ -15,7 +15,7 @@
 
   <style>
     /* ---------------------------------------------------------
-       Design tokens — change one value, it cascades everywhere.
+       Design tokens. Change one value, it cascades everywhere.
        --------------------------------------------------------- */
     :root {
       --bg: #faf8f3;
@@ -24,8 +24,7 @@
       --muted: #6b6b6b;
       --rule: #d9d4c8;
       --accent: #8b3a3a;
-      --measure: 760px;       /* max content width */
-      --measure-wide: 980px;  /* max width for project grid */
+      --measure: 880px;       /* max content width, unified for every section */
     }
 
     *, *::before, *::after { box-sizing: border-box; }
@@ -77,38 +76,31 @@
        Layout shell
        --------------------------------------------------------- */
     main {
-      max-width: var(--measure-wide);
+      max-width: var(--measure);
       margin: 0 auto;
-      padding: 4rem 1.5rem 4rem;
+      padding: 3rem 1.5rem 3rem;
     }
 
     section {
-      max-width: var(--measure);
-      margin: 0 auto;
-      padding-top: 4rem;
-      margin-top: 4rem;
+      padding-top: 2.5rem;
+      margin-top: 2.5rem;
       border-top: 1px solid var(--rule);
     }
     section:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
 
-    /* Full-width sections (grids) override the narrower measure */
-    section.services, section.projects {
-      max-width: var(--measure-wide);
-    }
-
     /* ---------------------------------------------------------
-       HERO — photo + text side by side, stacks on mobile
+       HERO: photo + text side by side, stacks on mobile
        --------------------------------------------------------- */
     .hero {
       display: grid;
-      grid-template-columns: 180px 1fr;
+      grid-template-columns: 240px 1fr;
       gap: 2.5rem;
       align-items: center;
     }
 
     .hero-photo {
-      width: 180px;
-      height: 180px;
+      width: 240px;
+      height: 240px;
       border-radius: 6px;
       overflow: hidden;
       background: var(--rule); /* placeholder color while no image loads */
@@ -137,7 +129,7 @@
     }
 
     /* ---------------------------------------------------------
-       WHAT I DO — three service blocks
+       WHAT I DO: three service blocks
        --------------------------------------------------------- */
     .service-grid {
       display: grid;
@@ -163,7 +155,7 @@
     }
 
     /* ---------------------------------------------------------
-       SELECT PROJECTS — smaller card grid with typographic marks
+       SELECT PROJECTS: smaller card grid with typographic marks
        --------------------------------------------------------- */
     .project-grid {
       display: grid;
@@ -239,7 +231,7 @@
     }
 
     /* ---------------------------------------------------------
-       MOBILE — collapse all multi-column layouts to single column.
+       MOBILE: collapse all multi-column layouts to single column.
        Breakpoints: tablet (≤860) and phone (≤560).
        --------------------------------------------------------- */
     @media (max-width: 860px) {
@@ -251,7 +243,7 @@
       main { padding: 2.5rem 1.25rem; }
       h1 { font-size: 1.95rem; }
       h2 { margin-bottom: 1.5rem; }
-      section { padding-top: 3rem; margin-top: 3rem; }
+      section { padding-top: 2rem; margin-top: 2rem; }
 
       .hero {
         grid-template-columns: 1fr;
@@ -259,8 +251,8 @@
         text-align: left;
       }
       .hero-photo {
-        width: 130px;
-        height: 130px;
+        width: 200px;
+        height: 200px;
       }
 
       .project-grid { grid-template-columns: 1fr; }
@@ -287,7 +279,7 @@
         <h1>Operator. Builder. Delivering Unique Growth Solutions.</h1>
         <p class="lede">
           I help companies turn ambiguous opportunities into clear roadmaps,
-          measurable tests, and repeatable commercial models — with 25 years
+          measurable tests, and repeatable commercial models, with 25 years
           building businesses, digital products, and revenue lines from zero.
         </p>
       </div>
@@ -342,9 +334,9 @@
         <article class="service">
           <h3>Product Development</h3>
           <p>
-            Design, test, and develop new digital products at AI speed —
-            from UI/UX design through high-fidelity prototypes to shipped
-            code, all with built-in experiment loops and conversion
+            Design, test, and develop new digital products at AI speed,
+            from UI/UX design through high fidelity prototypes to shipped
+            code, all with built in experiment loops and conversion
             optimization.
           </p>
         </article>
@@ -417,7 +409,7 @@
   </main>
 
   <footer>
-    © Vernon Steward · Built in New York.
+    © Vernon Steward
   </footer>
 
 </body>
