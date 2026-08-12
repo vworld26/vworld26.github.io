@@ -1,25 +1,11 @@
-# vernonsteward.com
+# vworld26.github.io
 
-Personal website for Vernon Steward — operator, builder, CEO of Prota Studios.
+This repository exists only to redirect to **[vernonsteward.com](https://vernonsteward.com/)**.
 
-## Stack
+The site itself lives in [`vernonsteward-site`](https://github.com/vworld26/vernonsteward-site),
+which holds the `CNAME`. Keeping the custom domain on a *project* repo rather than on this
+*user-site* repo is what allows other project pages to keep their own
+`vworld26.github.io/<repo>/` URLs instead of being redirected to the domain.
 
-Plain HTML and CSS in a single file (`index.html`). No build step, no framework, no dependencies.
-
-## Local preview
-
-Open `index.html` directly in a browser, or run a tiny local web server from this folder:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then visit http://localhost:8000.
-
-## Deploy
-
-Hosted on GitHub Pages, pointed at the custom domain `vernonsteward.com`.
-
-## Edit
-
-The whole site lives in `index.html`. Content sits inside `<section>` tags in `<main>`; styling lives in the `<style>` block in `<head>`. Colors and spacing are defined as CSS variables in `:root` near the top of the `<style>` block — change one value and it cascades everywhere.
+**Do not add a `CNAME` file here** — doing so would re-claim vernonsteward.com for this
+repository and reintroduce that redirect for every project page on the account.
